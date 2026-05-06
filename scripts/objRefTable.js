@@ -1,0 +1,59 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.Platform,
+		C3.Plugins.TiledBg,
+		C3.Behaviors.jumpthru,
+		C3.Plugins.Text,
+		C3.Plugins.Touch,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.Sprite.Acts.SetY,
+		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Sprite.Acts.AddInstanceVar,
+		C3.Plugins.System.Exps.dt,
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.Sprite.Cnds.IsOverlapping,
+		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Behaviors.Platform.Acts.SimulateControl,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.Touch.Cnds.OnTouchEnd
+	];
+};
+self.C3_JsPropNameTable = [
+	{YSpeed: 0},
+	{Platform: 0},
+	{Pou: 0},
+	{Cloud: 0},
+	{Coin: 0},
+	{TiledBackground: 0},
+	{Jumpthru: 0},
+	{Platfrom: 0},
+	{ScoreText: 0},
+	{ButtonLeft: 0},
+	{ButtonRight: 0},
+	{Touch: 0},
+	{Score: 0},
+	{NextPlatformY: 0}
+];
+
+self.InstanceType = {
+	Pou: class extends self.ISpriteInstance {},
+	Cloud: class extends self.ISpriteInstance {},
+	Coin: class extends self.ISpriteInstance {},
+	TiledBackground: class extends self.ITiledBackgroundInstance {},
+	Platfrom: class extends self.ISpriteInstance {},
+	ScoreText: class extends self.ITextInstance {},
+	ButtonLeft: class extends self.ISpriteInstance {},
+	ButtonRight: class extends self.ISpriteInstance {},
+	Touch: class extends self.IInstance {}
+}
