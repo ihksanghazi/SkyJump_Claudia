@@ -26,7 +26,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
-		C3.Plugins.Touch.Cnds.OnTouchEnd
+		C3.Plugins.Touch.Cnds.OnTouchEnd,
+		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.System.Cnds.OnLayoutStart
 	];
 };
 self.C3_JsPropNameTable = [
@@ -42,6 +45,12 @@ self.C3_JsPropNameTable = [
 	{ButtonLeft: 0},
 	{ButtonRight: 0},
 	{Touch: 0},
+	{TitleText: 0},
+	{Poy: 0},
+	{Playtext: 0},
+	{GameOverText: 0},
+	{PouCry: 0},
+	{TextPlayAgain: 0},
 	{Score: 0},
 	{NextPlatformY: 0}
 ];
@@ -55,5 +64,11 @@ self.InstanceType = {
 	ScoreText: class extends self.ITextInstance {},
 	ButtonLeft: class extends self.ISpriteInstance {},
 	ButtonRight: class extends self.ISpriteInstance {},
-	Touch: class extends self.IInstance {}
+	Touch: class extends self.IInstance {},
+	TitleText: class extends self.ITextInstance {},
+	Poy: class extends self.ISpriteInstance {},
+	Playtext: class extends self.ITextInstance {},
+	GameOverText: class extends self.ITextInstance {},
+	PouCry: class extends self.ISpriteInstance {},
+	TextPlayAgain: class extends self.ITextInstance {}
 }
